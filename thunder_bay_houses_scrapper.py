@@ -15,7 +15,7 @@ def scrape():
 
         for raw_listing in raw_listings:
             title = split_raw_title(raw_listing)[0]
-            price = sanitize_price(split_raw_title(raw_listing)[1])
+            price = int(sanitize_price(split_raw_title(raw_listing)[1]))
             description = raw_listing.contents[1]
             url = main_url + raw_listing.h3.a['href']
 
@@ -29,7 +29,7 @@ def scrape():
 
         for raw_listing in raw_listings:
             title = split_raw_title(raw_listing)[0]
-            price = sanitize_price(split_raw_title(raw_listing)[1])
+            price = int(sanitize_price(split_raw_title(raw_listing)[1]))
             description = raw_listing.contents[1]
             url = main_url + raw_listing.h3.a['href']
 
@@ -48,6 +48,3 @@ def scrape():
     raw_feature_listings = html_soup.find_all('div', 'feature')
 
     return get_listings(raw_listings)
-
-
-print(type(scrape()))

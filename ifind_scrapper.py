@@ -7,7 +7,7 @@ def scrape():
         price_container = raw_listing.find('p', 'price').span
         price = 0
         if price_container is not None:
-            price = price_container.text.replace('$', '').replace(',','')
+            price = int(price_container.text.replace('$', '').replace(',',''))
 
         return price
 
@@ -42,4 +42,3 @@ def scrape():
 
     return listings
 
-print(type(scrape()))
