@@ -1,6 +1,6 @@
 # Real Estate Scraper
 
-A web scraping utility that returns all of the posted properties not on the MLS in Thunder Bay.
+A web scraping utility that returns all of properties not on the MLS in Thunder Bay.
 
 ## Motivation
 
